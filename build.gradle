@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.google'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.codeborne:selenide:7.0.2'
+    testImplementation 'org.assertj:assertj-core:3.24.2'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+
+    testImplementation 'org.slf4j:slf4j-api:2.0.9'
+    testRuntimeOnly 'ch.qos.logback:logback-classic:1.4.11'
+
+}
+
+test {
+    useJUnitPlatform()
+}
